@@ -89,7 +89,7 @@ const Selector = ({onChange}) => {
   };
   const menuItems = Object.entries(options).map((entry) => {
     const [key, value] = entry;
-    return <option>{value} ({key})</option>;
+    return <option key={key}>{value} ({key})</option>;
   });
   return <select className="form-control" onChange={onChange}>{menuItems}</select>;
 };
